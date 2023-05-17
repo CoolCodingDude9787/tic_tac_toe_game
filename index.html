@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+    <script src="/game.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+</head>
+<body class="bg-green-400">
+  <div id="board">
+    <div id="row_one" class="flex">
+       <div id="box1" class="text-center w-1/6 p-10 text-6xl border-4 border-blue-500">🖥️</div> 
+       <div id="box2" class="text-center w-1/6 p-10 text-6xl border-4 border-blue-500">🖥️</div>
+       <div id="box3" class="text-center w-1/6 p-10 text-6xl border-4 border-blue-500">🖥️</div>
+    </div>
+     <div id="row_two" class="flex">
+       <div id="box4" class="text-center w-1/6 p-10 text-6xl border-4 border-blue-500">🖥️</div> 
+       <div id="box5" class="text-center w-1/6 p-10 text-6xl border-4 border-blue-500">🖥️</div>
+       <div id="box6" class="text-center w-1/6 p-10 text-6xl border-4 border-blue-500">🖥️</div>
+    </div>
+     <div id="row_three" class="flex">
+       <div id="box7" class="text-center w-1/6 p-10 text-6xl border-4 border-blue-500">🖥️</div> 
+       <div id="box8" class="text-center w-1/6 p-10 text-6xl border-4 border-blue-500">🖥️</div>
+       <div id="box9" class="text-center w-1/6 p-10 text-6xl border-4 border-blue-500">🖥️</div>
+    </div>
+  </div>
+  
+  <button id="buttonX" class="p-4 m-4 bg-red-500 border-4 border-red-800 rounded-xl text-3xl">🥚</button>
+  <button id="buttonO" class="p-4 m-4 bg-blue-300 border-4 border-blue-600 rounded-xl text-3xl">🥐</button>
+  <button id="buttonNewGame" onclick="reset()" class="p-4 m-4 bg-red-500 border-4 border-red-800 rounded-xl text-3xl">New Game</button>
+
+  <br> <br> <br> <br>
+  <p id="winningBox" class="hidden p-4 m-4 bg-blue-400 border-4 border-blue-800 rounded-xl text-3xl">The winner is...#{winner}</p>
+  <p id="whose turn" class="p-4 m-4 bg-green-400 border-4 border-green-400 rounded-xl text-2xl w-1/6">It is 's turn</p>
+  <script>
+    let marker;
+    let buttonX = document.getElementById("buttonX");
+    let buttonO = document.getElementById("buttonO");
+
+    buttonX.addEventListener("click", e =>{
+        marker=e.currentTarget.textContent
+    })
+
+    buttonO.addEventListener("click", e =>{
+        marker=e.currentTarget.textContent
+    })
+let box1 = document.getElementById("box1");
+let box2 = document.getElementById("box2");
+let box3 = document.getElementById("box3");
+let box4 = document.getElementById("box4");
+let box5 = document.getElementById("box5");
+let box6 = document.getElementById("box6");
+let box7 = document.getElementById("box7");
+let box8 = document.getElementById("box8");
+let box9 = document.getElementById("box9"); 
+let whose_turn = "🥚"
+let winningBox = document.getElementById("winningBox")
+
+let winner = 1;
+let text1 = box1.textContent;
+let text2 = box2.textContent;
+let text3 = box3.textContent;
+let text4 = box4.textContent;
+let text5 = box5.textContent;
+let text6 = box6.textContent;
+let text7 = box7.textContent;
+let text8 = box8.textContent;
+let text9 = box9.textContent;
+
+box1.addEventListener("click", e =>{
+  if (box1.textContent === "🖥️")
+  {box1.textContent = marker
+  }
+  checkAll()
+})
+box2.addEventListener("click", e =>{
+  if (box2.textContent === "🖥️")
+  {box2.textContent = marker
+  }
+  checkAll()
+})
+box3.addEventListener("click", e =>{
+  if (box3.textContent === "🖥️")
+  {box3.textContent = marker
+  }
+  checkAll()
+})
+box4.addEventListener("click", e =>{
+  if (box4.textContent === "🖥️")
+  {box4.textContent = marker
+  }
+  checkAll()
+})
+box5.addEventListener("click", e =>{
+  if (box5.textContent === "🖥️")
+  {box5.textContent = marker
+  }
+  checkAll()
+})
+box6.addEventListener("click", e =>{
+  if (box6.textContent === "🖥️")
+  {box6.textContent = marker
+  }
+  checkAll()
+})
+box7.addEventListener("click", e =>{
+  if (box7.textContent === "🖥️")
+  {box7.textContent = marker
+  }
+  checkAll()
+})
+box8.addEventListener("click", e =>{
+  if (box8.textContent === "🖥️")
+  {box8.textContent = marker
+  }
+  checkAll()
+})
+box9.addEventListener("click", e =>{
+  if (box9.textContent === "🖥️")
+  {box9.textContent = marker
+  }
+  checkAll()
+})
+
+
+  </script>
+</body>
+</html>
