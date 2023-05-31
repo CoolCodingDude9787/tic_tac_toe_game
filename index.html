@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-    <script src="/game.js"></script>
+    <script src="game.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +8,7 @@
     <title>Tic Tac Toe</title>
 </head>
 <body class="bg-green-400">
+  <p class="text-2xl">welcome to the tic tac toe game</p>
   <div id="board">
     <div id="row_one" class="flex">
        <div id="box1" class="text-center w-1/6 p-10 text-6xl border-4 border-blue-500">🖥️</div> 
@@ -25,7 +26,7 @@
        <div id="box9" class="text-center w-1/6 p-10 text-6xl border-4 border-blue-500">🖥️</div>
     </div>
   </div>
-  
+ 
   <button id="buttonX" class="p-4 m-4 bg-red-500 border-4 border-red-800 rounded-xl text-3xl">🥚</button>
   <button id="buttonO" class="p-4 m-4 bg-blue-300 border-4 border-blue-600 rounded-xl text-3xl">🥐</button>
   <button id="buttonNewGame" onclick="reset()" class="p-4 m-4 bg-red-500 border-4 border-red-800 rounded-xl text-3xl">New Game</button>
@@ -33,11 +34,12 @@
   <br> <br> <br> <br>
   <p id="winningBox" class="hidden p-4 m-4 bg-blue-400 border-4 border-blue-800 rounded-xl text-3xl">The winner is...#{winner}</p>
   <p id="whose turn" class="p-4 m-4 bg-green-400 border-4 border-green-400 rounded-xl text-2xl w-1/6">It is 's turn</p>
+
   <script>
-    let marker;
+
     let buttonX = document.getElementById("buttonX");
     let buttonO = document.getElementById("buttonO");
-
+//buttons are offically named, both of them. 
     buttonX.addEventListener("click", e =>{
         marker=e.currentTarget.textContent
     })
@@ -55,6 +57,7 @@ let box7 = document.getElementById("box7");
 let box8 = document.getElementById("box8");
 let box9 = document.getElementById("box9"); 
 let whose_turn = "🥚"
+let marker = whose_turn
 let winningBox = document.getElementById("winningBox")
 
 let winner = 1;

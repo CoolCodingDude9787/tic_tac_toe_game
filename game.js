@@ -1,5 +1,18 @@
 function checkAll(){
+  if(marker = "🥚"){
+    marker = "🥐"
+   
+ 
+  
+}
 
+// if(marker = "🥐"){
+//   marker = "🥚"
+// }
+// else if(marker = "🥐"){
+//  marker = "🥚"
+// }
+console.log(marker)
     if (checkRow1()){
       winningBox.classList.remove("hidden");
       winningBox.textContent = 'We have a winner! The winner is...';
@@ -42,7 +55,7 @@ function checkAll(){
       return;
     }
   
-  
+  //🥐🥚
     checkRow1()
     checkRow2()
     checkRow3()
@@ -55,7 +68,7 @@ function checkAll(){
   }
 
   function reset() {
- 
+ marker = "🥚"
     box1.textContent = "🖥️";
     box2.textContent = "🖥️";
     box3.textContent = "🖥️";
@@ -69,7 +82,7 @@ function checkAll(){
     }
 
 function checkRow1(){
- 
+ //checking rows for wins by either party
     if (box1.textContent ==="🥚" && box2.textContent ==="🥚" && box3.textContent ==="🥚"){
       return true 
     }else if (box1.textContent ==="🥐" && box2.textContent ==="🥐" && box3.textContent ==="🥐"){
